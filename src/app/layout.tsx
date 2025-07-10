@@ -1,4 +1,5 @@
 import "./globals.css";
+import LinearBackground from "@/components/LinearBackground";
 
 export default function RootLayout({
   children,
@@ -8,7 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <LinearBackground>
+          {children}
+        </LinearBackground>
       </body>
     </html>
   );
