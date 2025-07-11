@@ -21,8 +21,8 @@
 //             </h2>
 //           </div>
 //           <p className="bg-gradient-to-l from-[#177C4D] to-[#E0E0EB] bg-clip-text text-transparent ">
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-//             incididunt ut labore et dolore magna aliqua. A little longer like 4 - 5 lines are 
+//             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+//             incididunt ut labore et dolore magna aliqua. A little longer like 4 - 5 lines are
 //             okay for this section. This is an about us section.
 //           </p>
 //         </div>
@@ -85,108 +85,72 @@
 
 // export default Projects;
 
-
 "use client";
 import React from "react";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 
 export function HeroParallaxDemo() {
-  return (
-    <HeroParallax products={products} />
-  );
+  return <HeroParallax products={products} />;
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-  },
-  {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    title: "HamroCSIT Entrance",
+    link: "https://hamrocsit.com/entrance",
+    thumbnail: "/projects/hamrocsit entrance.png",
   },
 
   {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    title: "HamroNotes",
+    link: "https://hamronotes.com",
+    thumbnail: "/projects/hamronotes1.png",
   },
 
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-  },
-  {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-  },
-  {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    title: "UpstartPrep",
+    link: "https://upstartprep.com",
+    thumbnail: "/projects/upstart1.png",
   },
 
   {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    title: "HamroCSIT",
+    link: "https://hamrocsit.com",
+    thumbnail: "/projects/hamrocsit entrance.png",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    title: "UpstartPrep",
+    link: "https://upstartprep.com",
+    thumbnail: "/projects/upstart1.png",
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    title: "Nymna Old",
+    link: "https://nymna.com",
+    thumbnail: "/projects/nymna old.png",
+  },
+
+  {
+    title: "HamroCSIT App",
+    link: "https://play.google.com/store/apps/details?id=com.hamrocsit",
+    thumbnail: "/projects/hamrocsitapp.png",
   },
   {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    title: "UpstartPrep",
+    link: "https://upstartprep.com",
+    thumbnail: "/projects/upstart2.png",
+  },
+  {
+    title: "UpstartPrep",
+    link: "https://upstartprep.com",
+    thumbnail: "/projects/upstart3.png",
+  },
+  {
+    title: "HamroNotes BCA",
+    link: "https://hamronotes.com",
+    thumbnail: "/projects/hamronotes2.png",
+  },
+  {
+    title: "Test Prep",
+    link: "#",
+   
+    thumbnail: "/projects/upstart2.png",
   },
 ];
