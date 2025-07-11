@@ -1,32 +1,38 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import React, { useState } from "react"
-import Arrow from "@/app/images/arrow.svg"
-import { BackgroundBeams } from "../ui/background-beams"
-import MaxWidthWrapper from "../MaxWidthWrapper"
-import Button from "../ui/button"
-import LinearBackground from "../LinearBackground"
-import { HiMenuAlt3 } from "react-icons/hi"
-import MobileSliderMenu from "./mobileslidermenu"
+import Image from "next/image";
+import React, { useState } from "react";
+import Arrow from "@/app/images/arrow.svg";
+import { BackgroundBeams } from "../ui/background-beams";
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import Button from "../ui/button";
+import LinearBackground from "../LinearBackground";
+import { HiMenuAlt3 } from "react-icons/hi";
+import MobileSliderMenu from "./mobileslidermenu";
 
 export const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <LinearBackground>
       <MaxWidthWrapper>
         {/* Navigation Header */}
         <div className="flex flex-row justify-between items-center py-3 mb-16">
-          <Image src="/logo1.svg" alt="logo" width={114} height={93} className="cursor-pointer relative z-50" />
+          <Image
+            src="/logo1.svg"
+            alt="logo"
+            width={114}
+            height={93}
+            className="cursor-pointer relative z-50"
+          />
           <div className="hidden md:block">
             <ul className="flex flex-row gap-9 text-lg font-medium">
               <li className="cursor-pointer transition-colors">Home</li>
@@ -34,14 +40,14 @@ export const Header = () => {
               <li className="cursor-pointer transition-colors">Contact</li>
             </ul>
           </div>
-          <div 
-            className="block md:hidden relative z-50" 
+          <div
+            className="block md:hidden relative z-50"
             onClick={toggleMobileMenu}
           >
             <HiMenuAlt3 className="text-3xl cursor-pointer" />
           </div>
         </div>
-        
+
         {/* Main Content - Centered */}
         <div className="flex-1 flex flex-col justify-center items-center text-center px-4 mb-10 relative">
           <Image
@@ -57,11 +63,12 @@ export const Header = () => {
               We Build Edtech Solutions
             </h1>
             <p className="text-lg md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua.
+              We design powerful platforms and technologies that empower
+              educators and institutions to reach and support children more
+              effectively.
             </p>
-            <Button 
-              label="Contact Us" 
+            <Button
+              label="Contact Us"
               rightcomponent={<Arrow className="ms-3" />}
               className="relative z-50 cursor-pointer"
             />
@@ -69,12 +76,9 @@ export const Header = () => {
         </div>
         <BackgroundBeams />
       </MaxWidthWrapper>
-      
+
       {/* Mobile Slider Menu */}
-      <MobileSliderMenu 
-        isOpen={isMobileMenuOpen} 
-        onClose={closeMobileMenu} 
-      />
+      <MobileSliderMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
     </LinearBackground>
-  )
-}
+  );
+};
