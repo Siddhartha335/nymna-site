@@ -9,9 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <LinearBackground>
+        {/* <LinearBackground> */}
           {children}
-        </LinearBackground>
+        {/* </LinearBackground> */}
       </body>
     </html>
   );

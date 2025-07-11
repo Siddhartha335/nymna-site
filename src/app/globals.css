@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #fff;
+  --foreground: #0C2631;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -131,3 +131,29 @@ body {
 }
 
 
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-custom-radial {
+    background: radial-gradient(
+      107.19% 844.57% at 0% 97.66%,
+      #3399FF 0%,
+      #F0F0F5 62.03%,
+      #13548A 100%
+    );
+  }
+}
