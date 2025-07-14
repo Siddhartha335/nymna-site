@@ -117,7 +117,7 @@ export const products = [
     thumbnail: "/projects/hamrocsit entrance.png",
   },
   {
-    title: "UpstartPrep",
+    title: "UpstartPrep - SAT Preparation",
     link: "https://upstartprep.com",
     thumbnail: "/projects/upstart1.png",
   },
@@ -133,7 +133,7 @@ export const products = [
     thumbnail: "/projects/hamrocsitapp.png",
   },
   {
-    title: "UpstartPrep",
+    title: "UpstartPrep - ACT Preparation",
     link: "https://upstartprep.com",
     thumbnail: "/projects/upstart2.png",
   },
@@ -150,7 +150,6 @@ export const products = [
   {
     title: "Test Prep",
     link: "#",
-   
     thumbnail: "/projects/upstart2.png",
   },
 ];

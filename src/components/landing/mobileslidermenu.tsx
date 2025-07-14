@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import React from "react";
+import Image from "next/image";
 import { AuroraBackground } from "../ui/aurora-background";
 import { HiX } from "react-icons/hi"
 
@@ -37,7 +38,7 @@ const MobileSliderMenu = ({ isOpen, onClose }:{
           >
             {/* Header */}
             <div className="flex justify-between items-center p-6 py-9 border-b border-black/20 bg-white/10 backdrop-blur-sm">
-              <h2 className="text-xl font-semibold text-black">Menu</h2>
+              <Image src="/logo1.svg" alt="logo" width={83} height={93} />
               <button 
                 onClick={onClose}
                 className="p-2 rounded-full hover:bg-black/10 transition-colors"
@@ -52,7 +53,7 @@ const MobileSliderMenu = ({ isOpen, onClose }:{
                 <li>
                   <a 
                     href="#" 
-                    className="block text-lg font-medium text-black hover:text-blue-600 transition-colors py-2"
+                    className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
                     onClick={onClose}
                   >
                     Home
@@ -61,7 +62,7 @@ const MobileSliderMenu = ({ isOpen, onClose }:{
                 <li>
                   <a 
                     href="#" 
-                    className="block text-lg font-medium text-black hover:text-blue-600 transition-colors py-2"
+                    className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
                     onClick={onClose}
                   >
                     Products
@@ -70,10 +71,28 @@ const MobileSliderMenu = ({ isOpen, onClose }:{
                 <li>
                   <a 
                     href="#" 
-                    className="block text-lg font-medium text-black hover:text-blue-600 transition-colors py-2"
+                    className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
+                    onClick={onClose}
+                  >
+                    Blogs
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#" 
+                    className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
                     onClick={onClose}
                   >
                     Contact
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#" 
+                    className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
+                    onClick={onClose}
+                  >
+                    Careers
                   </a>
                 </li>
               </ul>

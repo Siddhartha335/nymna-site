@@ -31,7 +31,7 @@ const Footer = () => {
         {/* CTA section */}
         <div className='flex flex-col items-center order-first lg:order-none'>
             <h2 className='text-xl sm:text-2xl font-light mb-6 sm:mb-8 text-center max-w-md'>
-                Let us help bringing your ideas to life!
+                Let us help bring your ideas to life!
             </h2>
             <Button 
                 label="Let's start" 

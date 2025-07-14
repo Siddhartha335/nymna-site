@@ -1,5 +1,5 @@
 import "./globals.css";
-import LinearBackground from "@/components/LinearBackground";
+// import LinearBackground from "@/components/LinearBackground";
 
 export default function RootLayout({
   children,

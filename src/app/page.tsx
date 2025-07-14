@@ -1,3 +1,4 @@
+import ContactForm from "@/components/landing/contact";
 import Footer from "@/components/landing/footer";
 import {Header} from "@/components/landing/header";
 import { HeroParallaxDemo } from "@/components/landing/projects";
@@ -9,6 +10,7 @@ export default function Home() {
     <Header />
     {/* <Projects /> */}
     <HeroParallaxDemo />
+    <ContactForm />
     <Footer />
    </>
   );
