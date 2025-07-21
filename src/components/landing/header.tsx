@@ -17,7 +17,7 @@ export const Header = () => {
         <Navbar />
 
         {/* Main Content - Centered */}
-        <div className="flex-1 flex flex-col justify-center items-center text-center px-4 mb-10 relative">
+        <div className="flex-1 flex flex-col justify-center items-center text-center px-4 mb-20 md:mb-10 relative">
           <Image
             src="/logo-graphics.svg"
             alt="logo"
@@ -26,8 +26,8 @@ export const Header = () => {
             priority
             className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-[66%]"
           />
-          <div className="z-10 relative py-20">
-            <h1 className="text-[60px] md:text-[112px] font-bold leading-[80px] md:leading-[150px] mb-16">
+          <div className="z-10 relative ">
+            <h1 className="text-[60px] md:text-[80px] font-bold leading-[80px] md:leading-[100px] mb-16 max-w-2xl">
               We Build Edtech Solutions
             </h1>
             <p className="text-lg md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed">

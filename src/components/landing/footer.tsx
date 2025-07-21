@@ -10,7 +10,7 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 const Footer = () => {
   return (
     <div>
-    <MaxWidthWrapper className='max-w-7xl pt-12 px-4 sm:px-6 lg:px-8'>
+    <MaxWidthWrapper>
     <Image 
         src="/logo1.svg" 
         alt="logo" 
@@ -23,9 +23,9 @@ const Footer = () => {
     <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 lg:gap-4'>
         {/* Contact section */}
         <div className='text-base sm:text-lg text-center lg:text-left'>
-            <h2 className='pb-4 sm:pb-8 text-lg sm:text-xl font-medium'>Contact</h2>
-            <p className='pb-2 sm:pb-4'>+977-9866115099</p>
-            <p>info@nymna.com</p>
+            <h2 className='text-xs font-medium'>Contact</h2>
+            <p className='mt-4 sm:pb-4 text-[15px]'>+977-9866115099</p>
+            <p className='text-[15px]'>info@nymna.com</p>
         </div>
         
         {/* CTA section */}
@@ -41,21 +41,21 @@ const Footer = () => {
         </div>
         
         {/* Location section */}
-        <div className='text-base sm:text-lg text-center lg:text-right'>
-            <h2 className='pb-4 sm:pb-8 text-lg sm:text-xl font-medium'>Based in Nepal</h2>
-            <p className='pb-2 sm:pb-4'>Bagdole, Lalitpur</p>
+        <div className='text-center lg:text-left'>
+            <h2 className='text-xs font-medium'>Based in Nepal</h2>
+            <p className='text-[15px] mt-4 sm:pb-4'>Bagdole, Lalitpur</p>
         </div>
     </div>        
     
     {/* Footer section - responsive layout */}
-    <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 pt-12 sm:pt-16'>
+    <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 py-12 sm:pt-16'>
         {/* Copyright */}
         <div className='max-w-full sm:max-w-[120px] text-center sm:text-left'>
-            <p className='text-xs sm:text-sm'>© Copyright 2025 Nymna Technology</p>
+            <p className='text-xs'>© Copyright 2025 Nymna Technology</p>
         </div>
         
         {/* Terms */}
-        <div className='text-xs sm:text-sm text-center order-last sm:order-none'>
+        <div className='text-xs text-center order-last sm:order-none'>
             Terms & Conditions
         </div>
         

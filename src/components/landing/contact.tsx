@@ -1,8 +1,7 @@
 "use client"
 
 import {useState} from 'react';
-import {CheckCircle, ChevronDown} from 'lucide-react';
-import { cn } from '@/app/lib/utils';
+import {CheckCircle} from 'lucide-react';
 const ContactForm = () => {
 	const [formData, setFormData] = useState({
 		firstName: '',
@@ -30,17 +29,17 @@ const ContactForm = () => {
 	};
 
 	return (
-		<div className="bg-blumine-900 w-full relative overflow-hidden">
+		<div className="bg-blumine-900 w-full relative overflow-hidden" id='contact'>
 			{/* <div className="absolute left-[162px] top-0 bottom-0 w-px"></div> */}
 			<div className="absolute inset-0">
-                    <div
+                    {/* <div
                       className={cn(
                         "absolute inset-0",
                         "[background-size:40px_40px]",
                         "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
                         "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
                       )}
-                    />
+                    /> */}
                     {/* Radial gradient for the container to give a faded look */}
                     <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-[linear-gradient(104.92deg,_#B3D0F5_30.64%,_#57A5FF_72.12%,_#247BFF_99.78%)] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
             </div>
