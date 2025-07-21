@@ -6,8 +6,8 @@ import { Metadata } from "next"
 import type { BlogPost } from "../page"
 import { blogs } from "../page"
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const blog = params.slug;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const blog = (await params).slug;
 
   const specificBlog = blogs.find(b => b.id === blog);
   if (!specificBlog) {
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const specificBlog = params.slug;
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const specificBlog = (await params).slug;
 
   const blog = blogs.find(b => b.id === specificBlog);
   if (!blog) {
@@ -129,8 +129,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             </p>
             
             <p className="text-lg leading-relaxed">
-              In this comprehensive guide, we'll explore the fundamental principles that every software engineer should 
-              master to excel in today's fast-paced development environment.
+              In this comprehensive guide, we&apos;ll explore the fundamental principles that every software engineer should 
+              master to excel in today&apos;s fast-paced development environment.
             </p>
           </div>
 

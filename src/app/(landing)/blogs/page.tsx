@@ -197,7 +197,7 @@ const BlogPage = () => {
           {blogs.slice(1).map((blog, index) => (
             <Link 
               href={`/blogs/${blog.id}`} 
-              key={blog.id}
+              key={index}
               className="group block rounded-lg border border-gray-200 bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
               <div className="relative h-48 overflow-hidden">
