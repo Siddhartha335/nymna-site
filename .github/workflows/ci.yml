@@ -24,6 +24,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             # Navigate to project directory
+            export TERM=xterm
             cd /home/nymna.com/public_html
             
             # Pull latest changes
