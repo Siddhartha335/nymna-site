@@ -5,95 +5,7 @@ import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { MoveUpRight } from "lucide-react";
 import { Metadata } from "next";
-
-// Types
-export interface BlogPost {
-  id: string
-  intro: string
-  title: string
-  description: string
-  image: string
-  author_image: string
-  author_name: string
-  date: string
-  read_time: string
-  tags: string[]
-}
-
-export const blogs: BlogPost[] = [
-  {
-    id: "ux-review-presentations",
-    intro: "Design",
-    title: "UX Review Presentations",
-    description: "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    image: "/blog.png",
-    author_image: "/jenny.jpg",
-    author_name: "Jenny Wilson",
-    date: "20 Jan 2022",
-    read_time: "8 min read",
-    tags: ["UX Design", "Presentations", "Design Process"]
-  },
-  {
-    id: "design-systems-guide",
-    intro: "Design",
-    title: "Building Scalable Design Systems",
-    description: "A comprehensive guide to creating and maintaining design systems that scale with your organization.",
-    image: "/blog.png",
-    author_image: "/jenny.jpg",
-    author_name: "John Smith",
-    date: "15 Feb 2022",
-    read_time: "12 min read",
-    tags: ["Design Systems", "UI Components", "Design Tokens"]
-  },
-  {
-    id: "user-research-methods",
-    intro: "Research",
-    title: "Modern User Research Methods",
-    description: "Explore the latest user research techniques and how to implement them in your design process.",
-    image: "/blog.png",
-    author_image: "/jenny.jpg",
-    author_name: "Sarah Chen",
-    date: "10 Mar 2022",
-    read_time: "6 min read",
-    tags: ["User Research", "Methods", "UX Strategy"]
-  },
-  {
-    id: "mobile-first-design",
-    intro: "Design",
-    title: "Mobile-First Design Principles",
-    description: "Learn how to create exceptional mobile experiences that users love and convert better.",
-    image: "/blog.png",
-    author_image: "/jenny.jpg",
-    author_name: "Mike Johnson",
-    date: "5 Apr 2022",
-    read_time: "10 min read",
-    tags: ["Mobile Design", "Responsive", "UI/UX"]
-  },
-  {
-    id: "accessibility-guidelines",
-    intro: "Accessibility",
-    title: "Web Accessibility Best Practices",
-    description: "Essential guidelines for creating inclusive digital experiences that work for everyone.",
-    image: "/blog.png",
-    author_image: "/jenny.jpg",
-    author_name: "Emma Davis",
-    date: "22 Apr 2022",
-    read_time: "9 min read",
-    tags: ["Accessibility", "Inclusive Design", "WCAG"]
-  },
-  {
-    id: "prototyping-tools",
-    intro: "Tools",
-    title: "Choosing the Right Prototyping Tool",
-    description: "Compare popular prototyping tools and find the perfect fit for your design workflow.",
-    image: "/blog.png",
-    author_image: "/jenny.jpg",
-    author_name: "Alex Rodriguez",
-    date: "8 May 2022",
-    read_time: "7 min read",
-    tags: ["Prototyping", "Tools", "Workflow"]
-  }
-]
+import { blogs } from "@/data/blogs";
 
 export const metadata: Metadata = {
   title: "Blog | Resources and Insights",
@@ -116,7 +28,7 @@ const BlogPage = () => {
       {/* Header Section */}
       <div className="text-center my-8">
         <div className="inline-flex items-center px-2 py-1 bg-white rounded-full border border-gray-200 mb-4">
-          <span className="text-sm text-gray-600">Our Blog</span>
+          <span className="text-sm text-black">Our Blog</span>
         </div>          
         <h1 className='text-3xl sm:text-4xl !leading-[150%] mb-4 font-bold'>
           Resources and Insights
@@ -131,11 +43,11 @@ const BlogPage = () => {
         <Input
           type="text"
           placeholder="Search articles..."
-          className="bg-white text-black pr-10 pl-3 rounded-sm border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+          className="bg-white text-black pr-10 pl-3 rounded-sm border-[#57A5FF] focus:border-blue-500 focus:ring-blue-500"
         />
         <button 
           type="submit" 
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
+          className="absolute right-2 top-1/2 -translate-y-1/2 text-black hover:text-gray-700 transition-colors"
         >
           <CiSearch size={20} />
         </button>
@@ -149,7 +61,7 @@ const BlogPage = () => {
             href={`/blogs/${blogs[0].id}`}
             className="group block"
           >
-            <div className="grid md:grid-cols-2 gap-8 bg-white rounded-lg border border-gray-200 overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="grid md:grid-cols-2 gap-8 bg-custom-radial rounded-lg border border-[#13548A] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
               <div className="relative h-64 md:h-auto">
                 <Image
                   src={blogs[0].image}
@@ -198,7 +110,7 @@ const BlogPage = () => {
             <Link 
               href={`/blogs/${blog.id}`} 
               key={index}
-              className="group block rounded-lg border border-gray-200 bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              className="group block rounded-lg border border-[#13548A] bg-[#F0F0F5] shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -255,8 +167,8 @@ const BlogPage = () => {
       </div>
 
       {/* Newsletter Signup */}
-      <div className="mt-20 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8 text-center">
-        <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
+      <div className="mt-20 bg-gradient-to-r bg-custom-radial rounded-lg p-8 text-center">
+        <h3 className="text-2xl font-bold mb-4 text-[#13548A]">Stay Updated</h3>
         <p className="text-gray-600 mb-6 max-w-md mx-auto">
           Get the latest articles and insights delivered directly to your inbox.
         </p>
@@ -266,7 +178,7 @@ const BlogPage = () => {
             placeholder="Enter your email"
             className="flex-1"
           />
-          <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors">
+          <button className="bg-[#13548A] text-white px-6 py-2 rounded-md hover:bg-gray-800 transition-colors">
             Subscribe
           </button>
         </div>

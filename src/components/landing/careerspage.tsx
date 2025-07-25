@@ -83,7 +83,7 @@ const Careerspage = () => {
         {/* Job Listings */}
         <div className="space-y-6">
           {jobs.map((job, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow">
+            <div key={index} className="bg-custom-radial rounded-xl p-8 border border-[#57A5FF] hover:shadow-lg transition-shadow">
               <div className="flex justify-between items-start">
                 <div className="flex-1">
                   <h3 className="text-2xl mb-3">

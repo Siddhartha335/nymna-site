@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Button from '../ui/button'
-import Arrow from '@/app/images/arrow.svg'
+import Arrow from '@/images/arrow.svg'
 import MaxWidthWrapper from '../MaxWidthWrapper'
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";

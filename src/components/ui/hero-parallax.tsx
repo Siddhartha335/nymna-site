@@ -7,7 +7,7 @@ import {
   useSpring,
   MotionValue,
 } from "motion/react";
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -58,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="py-40 overflow-hidden relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="py-20 overflow-hidden relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       {/* Grid Background */}
       <div className="absolute inset-0">

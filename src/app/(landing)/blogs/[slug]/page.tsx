@@ -3,8 +3,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react"
 import { Metadata } from "next"
-import type { BlogPost } from "../page"
-import { blogs } from "../page"
+import type { BlogPost } from "@/data/blogs"
+import { blogs } from "@/data/blogs"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const blog = (await params).slug;
@@ -218,8 +218,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <p className="text-gray-600">Check out more insights and resources on our blog.</p>
           </div>
           <Link 
-            href="/blog"
-            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors"
+            href="/blogs"
+            className="inline-flex items-center gap-2 bg-[#13548A] text-white px-6 py-3 rounded-md hover:bg-gray-800 transition-colors"
           >
             Read More Articles
           </Link>

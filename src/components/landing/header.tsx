@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Arrow from "@/app/images/arrow.svg";
+import Arrow from "@/images/arrow.svg";
 import { BackgroundBeams } from "../ui/background-beams";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Button from "../ui/button";
@@ -15,7 +15,6 @@ export const Header = () => {
       <MaxWidthWrapper>
         {/* Navigation Header */}
         <Navbar />
-
         {/* Main Content - Centered */}
         <div className="flex-1 flex flex-col justify-center items-center text-center px-4 mb-20 md:mb-10 relative">
           <Image
@@ -24,13 +23,13 @@ export const Header = () => {
             width={354}
             height={331}
             priority
-            className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-[66%]"
+            className="absolute top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-[66%]"
           />
           <div className="z-10 relative ">
-            <h1 className="text-[60px] md:text-[80px] font-bold leading-[80px] md:leading-[100px] mb-16 max-w-2xl">
+            <h1 className="text-[60px] md:text-[80px] font-bold leading-[80px] md:leading-[100px] mb-24 max-w-2xl mt-10">
               We Build Edtech Solutions
             </h1>
-            <p className="text-lg md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg md:text-lg max-w-2xl mx-auto mb-15 leading-relaxed">
               We design powerful platforms and technologies that empower
               educators and institutions to reach and support children more
               effectively.
