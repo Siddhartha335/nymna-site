@@ -23,26 +23,24 @@ jobs:
           username: root
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            # Navigate to project directory
-            export TERM=xterm
-            cd /home/nymna.com/public_html
-            
-            # Pull latest changes
-            echo "🔄 Pulling latest changes..."
-            git pull origin main
-            
-            # Install dependencies
-            echo "📦 Installing dependencies..."
-            npm ci --production=false
-            
-            # Build the application
-            echo "🏗️ Building application..."
-            npm run build || { echo "❌ Build failed"; exit 1; }
-            
-            # Restart the application
-            echo "🚀 Restarting application..."
-            pm2 restart nymna-app 
-            
-            # Verify deployment
-            echo "✅ Deployment completed successfully!"
-            pm2 status
+              set -e
+              trap 'echo "❌ Error on line $LINENO. Exiting."' ERR
+
+              export TERM=xterm
+              cd /home/nymna.com/public_html
+
+              echo "🔄 Pulling latest changes..."
+              git pull origin main
+
+              echo "📦 Installing dependencies..."
+              npm ci --production=false
+
+              echo "🏗️ Building application..."
+              npm run build
+
+              echo "🚀 Restarting application..."
+              pm2 restart nymna-app
+
+              echo "✅ Deployment completed successfully!"
+              pm2 status
+
