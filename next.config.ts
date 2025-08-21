@@ -6,7 +6,10 @@ const nextConfig = {
       use: ['@svgr/webpack']
     });
     return config;
-  }
+  },
+  images: {
+    domains: ['admin.nymna.com'],
+  },
 };
 
 module.exports = nextConfig;

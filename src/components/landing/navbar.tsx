@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="hidden md:block">
         <ul className="flex flex-row gap-9 text-lg font-medium relative z-50">
             <Link href="/blogs"><li className="cursor-pointer transition-colors">Blogs</li></Link>
-            <Link href="#contact"><li className="cursor-pointer transition-colors">Contact</li></Link>
+            <Link href="/contact"><li className="cursor-pointer transition-colors">Contact</li></Link>
             <Link href="/careers">
               <li className="list-none cursor-pointer transition-colors relative">
                 Careers

@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { MoveUpRight } from "lucide-react";
-import { Metadata } from "next";
-import { blogs } from "@/data/blogs";
+import type { Metadata } from "next/types";
+import type { BlogPost } from "@/data/types";
+import { fetchAllBlogs } from "@/backend/api";
 
 export const metadata: Metadata = {
   title: "Blog | Resources and Insights",
@@ -22,7 +23,11 @@ export const metadata: Metadata = {
   }
 }
 
-const BlogPage = () => {
+const BlogPage = async () => {
+
+  const allBlogs:BlogPost[] = await fetchAllBlogs();
+  console.log(allBlogs)
+
   return (
     <MaxWidthWrapper className="mb-20">
       {/* Header Section */}
@@ -54,18 +59,18 @@ const BlogPage = () => {
       </div>
 
       {/* Featured Post */}
-      {blogs.length > 0 && (
+      {allBlogs.length > 0 && (
         <div className="mb-16">
           <h2 className="text-2xl font-bold mb-8">Featured Article</h2>
           <Link 
-            href={`/blogs/${blogs[0].id}`}
+            href={`/blogs/${allBlogs[0].id}`}
             className="group block"
           >
             <div className="grid md:grid-cols-2 gap-8 bg-custom-radial rounded-lg border border-[#13548A] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
               <div className="relative h-64 md:h-auto">
                 <Image
-                  src={blogs[0].image}
-                  alt={blogs[0].title}
+                  src={allBlogs[0].image}
+                  alt={allBlogs[0].title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -73,27 +78,27 @@ const BlogPage = () => {
               <div className="p-6 md:p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {blogs[0].intro}
+                    {allBlogs[0].intro}
                   </span>
-                  <span className="text-sm text-gray-500">{blogs[0].read_time}</span>
+                  <span className="text-sm text-gray-500">{allBlogs[0].read_time}</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
-                  {blogs[0].title}
+                  {allBlogs[0].title}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  {blogs[0].description}
+                  {allBlogs[0].description}
                 </p>
                 <div className="flex items-center gap-3">
                   <Image
-                    src={blogs[0].author_image}
-                    alt={blogs[0].author_name}
+                    src={allBlogs[0].author_image}
+                    alt={allBlogs[0].author_name}
                     width={40}
                     height={40}
                     className="rounded-full"
                   />
                   <div className="text-sm">
-                    <p className="font-medium">{blogs[0].author_name}</p>
-                    <p className="text-gray-500">{blogs[0].date}</p>
+                    <p className="font-medium">{allBlogs[0].author_name}</p>
+                    <p className="text-gray-500">{allBlogs[0].date}</p>
                   </div>
                 </div>
               </div>
@@ -106,7 +111,7 @@ const BlogPage = () => {
       <div>
         <h2 className="text-2xl font-bold mb-8">All Articles</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogs.slice(1).map((blog, index) => (
+          {allBlogs.slice(1).map((blog, index) => (
             <Link 
               href={`/blogs/${blog.id}`} 
               key={index}

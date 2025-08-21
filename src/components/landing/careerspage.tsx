@@ -1,6 +1,12 @@
 "use client";
 
+import { fetchCareers } from "@/backend/api";
+import { useEffect,useState } from "react";
+import type { Career } from "@/data/types";
+
 const Careerspage = () => {
+
+  const [alljobs,setAllJobs] = useState<Career[]>([]);
 
   const departments = [
     { name: 'View all', active: true },
@@ -9,40 +15,14 @@ const Careerspage = () => {
     { name: 'Marketing', active: false },
   ];
 
-  const jobs = [
-  {
-    title: 'Frontend Developer',
-    description: "We're looking for a skilled Frontend Developer to help us build intuitive, fast, and accessible web interfaces. You'll work closely with designers and backend engineers to deliver seamless user experiences.",
-    remote: true,
-    fullTime: true,
-    partTime: false,
-    requirements: [
-      '3+ years experience with React.js or similar frontend frameworks',
-      'Strong knowledge of HTML, CSS, JavaScript/TypeScript',
-      'Familiarity with responsive design and cross-browser compatibility',
-      'Experience integrating with RESTful APIs',
-      'Excellent communication and collaboration skills'
-    ],
-    payRange: '$80,000 - $110,000/year',
-    benefits: ['Remote work', 'Health and dental insurance', 'Learning stipend']
-  },
-  {
-    title: 'UI/UX Designer',
-    description: "We're seeking a UI/UX Designer to help craft beautiful and functional user experiences. The ideal candidate has a strong eye for design and user-centered thinking.",
-    remote: true,
-    fullTime: true,
-    partTime: false,
-    requirements: [
-      '2+ years experience in UI/UX design',
-      'Proficient in Figma, Adobe XD, or similar tools',
-      'Strong portfolio demonstrating user flows, wireframes, and high-fidelity mockups',
-      'Ability to collaborate with developers and product managers',
-      'Understanding of accessibility and design systems'
-    ],
-    payRange: '$70,000 - $100,000/year',
-    benefits: ['Flexible hours', 'Creative freedom', 'Wellness stipend']
-  }
-];
+  useEffect(()=> {
+    const fetchJobs = async () => {
+      const jobs = await fetchCareers();
+      setAllJobs(jobs);
+    }
+    fetchJobs();
+  },[])
+
 
 
   const handleApply = () => {
@@ -82,7 +62,7 @@ const Careerspage = () => {
 
         {/* Job Listings */}
         <div className="space-y-6">
-          {jobs.map((job, index) => (
+          {alljobs.map((job, index) => (
             <div key={index} className="bg-custom-radial rounded-xl p-8 border border-[#57A5FF] hover:shadow-lg transition-shadow">
               <div className="flex justify-between items-start">
                 <div className="flex-1">
@@ -103,7 +83,7 @@ const Careerspage = () => {
                         100% remote
                       </span>
                     )}
-                    {job.fullTime && (
+                    {job.fulltime && (
                       <span className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
