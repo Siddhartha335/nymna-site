@@ -27,7 +27,7 @@ jobs:
               trap 'echo "❌ Error on line $LINENO. Exiting."' ERR
 
               export TERM=xterm
-              cd /home/nymna.com/public_html
+              cd /var/www/nymna-frontend
 
               echo "🔄 Pulling latest changes..."
               git pull origin main
