@@ -89,10 +89,7 @@
 import React from "react";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 
-export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
-}
-export const products = [
+const products = [
   {
     title: "HamroCSIT Entrance",
     link: "https://hamrocsit.com/entrance",
@@ -153,3 +150,7 @@ export const products = [
     thumbnail: "/projects/upstart2.png",
   },
 ];
+
+export function HeroParallaxDemo() {
+  return <HeroParallax products={products} />;
+}

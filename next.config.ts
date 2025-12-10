@@ -8,7 +8,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['admin.nymna.com'],
+    domains: ['admin.nymna.com','0.0.0.0','localhost'],
   },
 };
 

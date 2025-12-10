@@ -19,10 +19,11 @@ const Navbar = () => {
   }
   return (
     <MaxWidthWrapper>
-    <div className="flex flex-row justify-between items-center py-3 mb-16">
+    <div className="flex flex-row justify-between items-center pt-3 mb-10">
         <Link href="/"><Image src="/logo1.svg" alt="logo" width={114} height={93} className="cursor-pointer relative z-50" /></Link>
         <div className="hidden md:block">
         <ul className="flex flex-row gap-9 text-lg font-medium relative z-50">
+            <Link href="/project"><li className="cursor-pointer transition-colors">Projects</li></Link>
             <Link href="/blogs"><li className="cursor-pointer transition-colors">Blogs</li></Link>
             <Link href="/contact"><li className="cursor-pointer transition-colors">Contact</li></Link>
             <Link href="/careers">

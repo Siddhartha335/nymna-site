@@ -157,3 +157,8 @@ body {
     );
   }
 }
+
+.btn-shadow {
+  box-shadow: 1px 2px 4px 1px #0C0D0D40;
+}
+

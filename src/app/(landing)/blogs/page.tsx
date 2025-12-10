@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper"
 import { Input } from "@/components/ui/input"
 import Image from "next/image";
@@ -26,8 +28,8 @@ export const metadata: Metadata = {
 const BlogPage = async () => {
 
   const allBlogs:BlogPost[] = await fetchAllBlogs();
-  console.log(allBlogs)
 
+  console.log(allBlogs)
   return (
     <MaxWidthWrapper className="mb-20">
       {/* Header Section */}

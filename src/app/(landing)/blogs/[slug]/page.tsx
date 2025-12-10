@@ -36,8 +36,6 @@ export async function generateMetadata(
     },
   };
 }
-
-// --- Page Component ---
 export default async function BlogPost(
   props: { params: { slug: string } }
 ) {
@@ -188,9 +186,9 @@ export default async function BlogPost(
         <div className="mt-12 pt-8 border-t">
           <h4 className="text-sm font-semibold text-gray-900 mb-4">Tags</h4>
           <div className="flex flex-wrap gap-2">
-            {blog.tags.map((tag, index) => (
+            {JSON.parse(blog.tags[0]).map((tag:string) => (
               <span
-                key={index}
+                key={tag}
                 className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-gray-200 transition-colors cursor-pointer"
               >
                 {tag}

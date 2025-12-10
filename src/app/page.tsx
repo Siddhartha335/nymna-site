@@ -5,7 +5,8 @@ import Image from "next/image";
 import ContactForm from "@/components/landing/contact";
 import Footer from "@/components/landing/footer";
 import {Header} from "@/components/landing/header";
-import { HeroParallaxDemo } from "@/components/landing/projects";
+// import { HeroParallaxDemo } from "@/components/landing/projects";
+// import Project from "@/components/Project/project";
 
 const LoadingScreen = () => {
   return (
@@ -27,7 +28,6 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time or wait for components to be ready
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000); // Adjust timing as needed
@@ -42,7 +42,8 @@ export default function Home() {
   return (
    <> 
     <Header />
-    <HeroParallaxDemo />
+    {/* <HeroParallaxDemo /> */}
+    {/* <Project /> */}
     <ContactForm />
     <Footer />
    </>

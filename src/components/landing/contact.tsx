@@ -25,13 +25,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-blumine-900 w-full relative overflow-hidden" id="contact">
+    <div className="w-full relative overflow-hidden" id="contact">
       <div className="absolute inset-0">
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-[linear-gradient(104.92deg,_#B3D0F5_30.64%,_#57A5FF_72.12%,_#247BFF_99.78%)] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center dark:bg-black"></div>
       </div>
 
       <div className="container mx-auto px-4 pt-[64px] pb-16 relative z-10">
-        <div className="max-w-5xl mx-auto mt-[51px]">
+        <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row">
             {/* Left Section - Mission */}
             <div className="w-full md:w-1/2 bg-[#13548A] p-8 flex flex-col justify-center">

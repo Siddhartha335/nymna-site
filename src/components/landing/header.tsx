@@ -5,13 +5,13 @@ import Arrow from "@/images/arrow.svg";
 import { BackgroundBeams } from "../ui/background-beams";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Button from "../ui/button";
-import LinearBackground from "../LinearBackground";
+// import LinearBackground from "../LinearBackground";
 import Navbar from "./navbar";
+import Link from "next/link";
 
 export const Header = () => {
 
   return (
-    <LinearBackground>
       <MaxWidthWrapper>
         {/* Navigation Header */}
         <Navbar />
@@ -34,15 +34,16 @@ export const Header = () => {
               educators and institutions to reach and support children more
               effectively.
             </p>
-            <Button
-              label="Contact Us"
-              rightcomponent={<Arrow className="ms-3" />}
-              className="relative z-50 cursor-pointer"
-            />
+            <Link href="/contact">
+              <Button
+                label="Contact Us"
+                rightcomponent={<Arrow className="ms-3" />}
+                className="relative z-50 cursor-pointer"
+              />
+            </Link>
           </div>
         </div>
         <BackgroundBeams />
       </MaxWidthWrapper>
-    </LinearBackground>
   );
 };

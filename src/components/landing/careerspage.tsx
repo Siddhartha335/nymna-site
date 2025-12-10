@@ -23,8 +23,6 @@ const Careerspage = () => {
     fetchJobs();
   },[])
 
-
-
   const handleApply = () => {
     const mailtoLink = `mailto:info@nymna.com`;
     window.open(mailtoLink, '_blank');
@@ -45,68 +43,72 @@ const Careerspage = () => {
         </div>
 
         {/* Department Filter */}
-        <div className="flex flex-wrap gap-3 mb-12">
-          {departments.map((dept, index) => (
-            <button
-              key={index}
-              className={`px-6 py-2 rounded-full border transition-colors ${
-                dept.active
-                  ? 'bg-[#13548A] text-white border-[#13548A]'
-                  : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
-              }`}
-            >
-              {dept.name}
-            </button>
-          ))}
-        </div>
+          <div className="flex flex-wrap gap-3 mb-12">
+            {departments.map((dept, index) => (
+              <button
+                key={index}
+                className={`px-6 py-2 rounded-full border transition-colors ${
+                  dept.active
+                    ? 'bg-[#13548A] text-white border-[#13548A]'
+                    : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                {dept.name}
+              </button>
+            ))}
+          </div>
 
-        {/* Job Listings */}
-        <div className="space-y-6">
-          {alljobs.map((job, index) => (
-            <div key={index} className="bg-custom-radial rounded-xl p-8 border border-[#57A5FF] hover:shadow-lg transition-shadow">
-              <div className="flex justify-between items-start">
-                <div className="flex-1">
-                  <h3 className="text-2xl mb-3">
-                    {job.title}
-                  </h3>
-                  <p className="text-secondary_light_blue-700 mb-6 text-lg">
-                    {job.description}
-                  </p>
-                  
-                  <div className="flex items-center space-x-4">
-                    {job.remote && (
-                      <span className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          {alljobs.length === 0 ? (
+            <div className="text-center my-8">There is no openings at the moment.</div>
+          ) : (
+            <>              
+              {/* Job Listings */}
+              <div className="space-y-6">
+                {alljobs.map((job, index) => (
+                  <div key={index} className="bg-custom-radial rounded-xl p-8 border border-[#57A5FF] hover:shadow-lg transition-shadow">
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <h3 className="text-2xl mb-3">
+                          {job.title}
+                        </h3>
+                        <p className="text-secondary_light_blue-700 mb-6 text-lg">
+                          {job.description}
+                        </p>
+                        
+                        <div className="flex items-center space-x-4">
+                          {job.remote ? (
+                            <span className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                              100% remote
+                            </span> ) : 
+                            <span className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                              Full-time
+                            </span>
+                          }
+                        </div>
+                      </div>
+                      
+                      <button 
+                        onClick={handleApply}
+                        className="flex items-center space-x-2 bg-[#13548A] text-white px-6 py-3 rounded-lg hover:bg-[#3399FF] transition-colors ml-8"
+                      >
+                        <span className="text-lg font-medium">Apply</span>
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        100% remote
-                      </span>
-                    )}
-                    {job.fulltime && (
-                      <span className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Full-time
-                      </span>
-                    )}
+                      </button>
+                    </div>
                   </div>
-                </div>
-                
-                <button 
-                  onClick={handleApply}
-                  className="flex items-center space-x-2 bg-[#13548A] text-white px-6 py-3 rounded-lg hover:bg-[#3399FF] transition-colors ml-8"
-                >
-                  <span className="text-lg font-medium">Apply</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </button>
+                ))}
               </div>
-            </div>
-          ))}
-        </div>
+            </>
+          )}
     </>
   )
 }
