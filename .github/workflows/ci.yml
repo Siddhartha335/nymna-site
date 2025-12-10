@@ -27,7 +27,7 @@ jobs:
               trap 'echo "❌ Error on line $LINENO. Exiting."' ERR
 
               export TERM=xterm
-              cd /var/www/nymna-frontend
+              cd /var/www/nymna-site
 
               echo "🔄 Pulling latest changes..."
               git pull origin main
@@ -39,7 +39,7 @@ jobs:
               npm run build
 
               echo "🚀 Restarting application..."
-              pm2 restart nymna-app
+              pm2 restart nymna
 
               echo "✅ Deployment completed successfully!"
               pm2 status
