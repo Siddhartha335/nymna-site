@@ -162,3 +162,33 @@ body {
   box-shadow: 1px 2px 4px 1px #0C0D0D40;
 }
 
+
+.card-shadow {
+  box-shadow: 0px 0px 5px 0px #FFFFFF1A;
+
+}
+
+.feature h1,
+.feature h2,
+.feature h3,
+.feature h4,
+.feature h5,
+.feature h6 {
+  color: linear-gradient(90deg, #0C2631 0%, #1E1E1E 99.99%);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.feature p {
+  color:#0C2631;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.feature li {
+  margin-bottom:5px;
+  list-style-type: disc;
+  margin-left: 12px;
+}

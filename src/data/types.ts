@@ -98,3 +98,33 @@ export interface Career {
 //     tags: ["Prototyping", "Tools", "Workflow"]
 //   }
 // ]
+
+interface Feature {
+  title: string
+  description: string
+}
+
+interface Description {
+  content:string,
+  imageUrl:string
+}
+
+export interface Project {
+  project_id?:string,
+  logo:string,
+  name:string,
+  short_description?:string,
+  medium_description?:string,
+  link?:string
+  long_description?:string,
+  features: Feature[],
+  main_description?:Description[],
+  technology_used?:{
+    design:string[],
+    databaase:string[],
+    docs:string[],
+    project_management:string[],
+    frontend:string[],
+    backend:string[]
+  }
+}
