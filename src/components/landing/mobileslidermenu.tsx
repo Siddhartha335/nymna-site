@@ -51,13 +51,22 @@ const MobileSliderMenu = ({ isOpen, onClose }:{
             {/* Menu Items */}
             <div className="p-6 flex-1 bg-white/10 backdrop-blur-sm">
               <ul className="space-y-6">
-                <li>
+                {/* <li>
                   <Link 
                     href="/blogs" 
                     className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
                     onClick={onClose}
                   >
                     Blogs
+                  </Link>
+                </li> */}
+                <li>
+                  <Link 
+                    href="/project" 
+                    className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
+                    onClick={onClose}
+                  >
+                    Projects
                   </Link>
                 </li>
                 <li>
@@ -69,7 +78,7 @@ const MobileSliderMenu = ({ isOpen, onClose }:{
                     Contact
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link 
                     href="/careers" 
                     className="block text-lg font-medium text-black hover:text-[#3399FF] transition-colors py-2"
@@ -77,14 +86,16 @@ const MobileSliderMenu = ({ isOpen, onClose }:{
                   >
                     Careers
                   </Link>
-                </li>
+                </li> */}
               </ul>
               
               {/* Additional Content */}
               <div className="mt-8 pt-8 border-t border-black/20">
-                <button className="w-full bg-black/20 backdrop-blur-sm text-black py-3 px-6 rounded-lg font-medium hover:bg-black/30 transition-colors">
-                  Get Started
-                </button>
+                <Link href={"/"}>
+                  <button className="w-full bg-black/20 backdrop-blur-sm text-black py-3 px-6 rounded-lg font-medium hover:bg-black/30 transition-colors">
+                    Get Started
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>

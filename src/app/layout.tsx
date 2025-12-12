@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next/types";
-import LinearBackground from "@/components/LinearBackground";
+// import LinearBackground from "@/components/LinearBackground";
 
 export const metadata: Metadata = {
 	title: "Nymna Technology",
@@ -20,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <LinearBackground>
+      <body >
+        {/* <LinearBackground> */}
           {children}
-        </LinearBackground>
+        {/* </LinearBackground> */}
       </body>
     </html>
   );

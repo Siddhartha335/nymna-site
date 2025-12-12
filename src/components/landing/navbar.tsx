@@ -20,20 +20,25 @@ const Navbar = () => {
   return (
     <MaxWidthWrapper>
     <div className="flex flex-row justify-between items-center pt-3 mb-10">
-        <Link href="/"><Image src="/logo1.svg" alt="logo" width={114} height={93} className="cursor-pointer relative z-50" /></Link>
+        <Link href="/" className="block md:hidden">
+          <Image src="/Logo.svg" alt="logo" width={80} height={40} className="cursor-pointer relative z-50" />
+        </Link>
+        <Link href="/" className="hidden md:block">
+          <Image src="/logo1.svg" alt="logo" width={114} height={93} className="cursor-pointer relative z-50" />
+        </Link>
         <div className="hidden md:block">
         <ul className="flex flex-row gap-9 text-lg font-medium relative z-50">
             <Link href="/project"><li className="cursor-pointer transition-colors">Projects</li></Link>
-            <Link href="/blogs"><li className="cursor-pointer transition-colors">Blogs</li></Link>
+            {/* <Link href="/blogs"><li className="cursor-pointer transition-colors">Blogs</li></Link> */}
             <Link href="/contact"><li className="cursor-pointer transition-colors">Contact</li></Link>
-            <Link href="/careers">
+            {/* <Link href="/careers">
               <li className="list-none cursor-pointer transition-colors relative">
                 Careers
-                {/* <div className="text-sm text-white absolute -top-10 left-3">
+                <div className="text-sm text-white absolute -top-10 left-3">
                   We're Hiring
-                </div> */}
+                </div>
               </li>
-            </Link>         
+            </Link>          */}
         </ul>
         </div>
         <div 

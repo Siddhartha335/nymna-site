@@ -6,7 +6,8 @@ import ContactForm from "@/components/landing/contact";
 import Footer from "@/components/landing/footer";
 import {Header} from "@/components/landing/header";
 // import { HeroParallaxDemo } from "@/components/landing/projects";
-// import Project from "@/components/Project/project";
+import Project from "@/components/Project/project";
+import LinearBackground from "@/components/LinearBackground";
 
 const LoadingScreen = () => {
   return (
@@ -14,8 +15,8 @@ const LoadingScreen = () => {
       <Image
         src="/logo.svg"
         alt="Logo"
-        width={200}
-        height={50}
+        width={80}
+        height={60}
         className="mb-4"
       />
       <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
@@ -41,11 +42,13 @@ export default function Home() {
 
   return (
    <> 
-    <Header />
+    <LinearBackground>
+      <Header />
     {/* <HeroParallaxDemo /> */}
-    {/* <Project /> */}
+    <Project status={false} />
     <ContactForm />
     <Footer />
+    </LinearBackground>
    </>
   );
 }

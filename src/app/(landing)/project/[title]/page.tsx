@@ -23,8 +23,8 @@ export default function ProjectPage({ params }: { params: { title: string } }) {
             className="mx-auto mb-5"
           />
           <h1 className="text-4xl font-light text-[#1A5169] mb-15">{project.name}</h1>
-          <h2 className="text-3xl font-semibold mb-4" style={{color: 'linear-gradient(90deg, #0C2631 0%, #1E1E1E 100%)'}}>{project.short_description}</h2>
-          <p className="text-base md:text-[20px] text-[#4B5666] font-normal max-w-3xl mx-auto mb-8">{project.medium_description}</p>
+          <h2 className="text-[28px] md:text-4xl font-semibold mb-4" style={{color: 'linear-gradient(90deg, #0C2631 0%, #1E1E1E 100%)'}}>{project.short_description}</h2>
+          <p className="text-base md:text-[20px] text-[#4B5666] leading-[28px] font-normal max-w-3xl mx-auto mb-8">{project.medium_description}</p>
           
           {project.link && (
             <Link 
@@ -42,7 +42,7 @@ export default function ProjectPage({ params }: { params: { title: string } }) {
       {/* Long Description Section */}
       <section className="px-6 py-12">
         <div className="max-w-5xl mx-auto">
-          <p className="text-4xl text-center font-normal text-[#0C2631] leading-relaxed">
+          <p className="text-lg md:text-4xl text-center font-light text-[#0C2631]">
             {project.long_description}
           </p>
         </div>
@@ -51,15 +51,15 @@ export default function ProjectPage({ params }: { params: { title: string } }) {
       {/* Key Features Section */}
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-semibold text-center mb-12" style={{color: 'linear-gradient(90deg, #0C2631 0%, #1E1E1E 100%)'}}>Key Features</h2>
+          <h2 className="text-[28px] md:text-4xl font-semibold text-center mb-12" style={{color: 'linear-gradient(90deg, #0C2631 0%, #1E1E1E 100%)'}}>Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {project.features.map((feature, index) => (
               <div 
                 key={index} 
                 className="bg-[#9EC6F2] border border-[#FFFFFF] card-shadow rounded-2xl p-6 hover:bg-opacity-80 transition-all"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-700">{feature.description}</p>
+                <h3 className="text-base font-normal text-[#1E1E1E] mb-3">{feature.title}</h3>
+                <p className="text-base md:text-lg font-light text-[#1E1E1E]">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -108,7 +108,7 @@ export default function ProjectPage({ params }: { params: { title: string } }) {
         <section className="px-6 py-16">
           <div className="max-w-6xl mx-auto">
 
-            <h2 className="text-4xl font-semibold text-center mb-16 
+            <h2 className="text-[28px] md:text-4xl font-semibold text-center mb-16 
               bg-gradient-to-r from-[#0C2631] to-[#1E1E1E] text-transparent bg-clip-text">
               Technology used in this project
             </h2>
@@ -207,7 +207,7 @@ export default function ProjectPage({ params }: { params: { title: string } }) {
       {/* Call to Action Section */}
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6" 
+          <h2 className="text-[28px] md:text-4xl font-bold mb-6" 
               style={{color: 'linear-gradient(90deg, #0C2631 0%, #1E1E1E 100%)'}}
           >Are you ready to use it?</h2>
           <p className="text-lg text-[#0C2631] mb-8 max-w-3xl mx-auto">

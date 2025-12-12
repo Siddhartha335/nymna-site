@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fdfdff;
+  --background: #B3D0F5;
   --foreground: #0C2631;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -175,8 +175,8 @@ body {
 .feature h5,
 .feature h6 {
   color: linear-gradient(90deg, #0C2631 0%, #1E1E1E 99.99%);
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -188,6 +188,7 @@ body {
 }
 
 .feature li {
+  font-size: 16px;
   margin-bottom:5px;
   list-style-type: disc;
   margin-left: 12px;

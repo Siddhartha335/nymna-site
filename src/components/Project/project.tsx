@@ -5,19 +5,25 @@ import Upstart from "@/images/upstart.svg"
 import type { Project } from '@/data/types'
 import Link from 'next/link'
 
-const Project = () => {
+interface ProjectProps {
+    status:boolean
+}
+
+const Project = ({status}:ProjectProps) => {
   return (
     <MaxWidthWrapper className='mt-12'>
         <div className='text-center mb-15'>
-            <button className='bg-[#FFFFFF] p-2.5 rounded-full text-base font-normal mb-8'>
+            {status === true && (
+                <button className='bg-[#FFFFFF] p-2.5 rounded-full text-base font-normal mb-8'>
                 Our Projects
-            </button>
+                </button>
+            )}
             <div className='max-w-[852px] mx-auto space-y-5'>
                 <h1 className='text-3xl font-light'>We bring bold ideas to life with smart, scalable solutions.</h1>
                 <p className='text-[#4B5666] text-lg'>At Nymna, our projects are more than code — they are partnerships built on innovation, quality, and impact.</p>
             </div>
         </div>
-        <div className='space-y-15 mb-15'>
+        <div className='space-y-15 mb-15 hidden md:block'>
             {/* first one */}
             <div className="max-w-6xl mx-auto bg-[#035398] hover:bg-[#0C3F6E] rounded-[15px] flex items-stretch justify-between relative overflow-hidden transition-all duration-1000 ease-in-out hover:scale-105 group">
             {/* Left Content */}
@@ -263,8 +269,236 @@ const Project = () => {
                         className='absolute top-0 -left-28 z-0 transition-transform duration-500 ease-in-out group-hover:scale-105'
                     />
                 </div>
+            </div>            
+        </div>
+
+        <div className='space-y-5 mb-15 block md:hidden'>
+            {/* first */}
+            <div className='relative'>
+                <div className="
+                max-w-[380px] max-h-[190px] sm:max-w-6xl mx-auto rounded-[8px] text-white flex relative overflow-hidden
+                group transition-all duration-1000 ease-in-out hover:scale-102
+                bg-[#035398] hover:bg-[#0C3F6E]
+                "> 
+                {/* Left Content */}  
+                <div className='p-4'>
+                    <div className='flex items-center gap-2.5'>
+                        <Image
+                            src={"/neb.svg"}
+                            alt="logo"
+                            width={80}
+                            height={81}
+                            className="h-8 w-8 md:w-20 md:h-[81px] transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                        <h2 className='text-lg sm:text-3xl font-medium'>NEB Summary</h2>
+                    </div>
+                    <div className='mt-[14px] space-y-3.5 text-white relative z-10 '>
+                        <p className='text-[13px] sm:text-base font-light w-[241px]'>Comprehensive entrance prep with real tests, practice sets, and performance reports.</p>
+                        <Link href={"/project/upstartprep"}>
+                        <button className='btn-shadow py-1.5 px-2.5 rounded-full text-[#1E1E1E] text-sm font-normal bg-[#FFFFFF] cursor-pointer'>
+                            Case Study
+                        </button>
+                        </Link>
+                    </div>
+                </div>     
+
+                {/* Right content */}
+                <div className='relative z-10'>
+                        <Image
+                            src="/Iphone.png"
+                            alt="logo"
+                            width={62}
+                            height={135}
+                            className="w-full h-[123px] -rotate-[15deg] top-10 left-4 relative transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                </div>
+
+                    {/* Logo now inside the group for hover effect */}
+                    <Image
+                        src="/right-neb.svg"
+                        alt="logo"
+                        width={52}
+                        height={65}
+                        className='absolute -top-2 right-0 z-0 transition-transform duration-500 ease-in-out group-hover:scale-105'
+                    />
+                </div>
             </div>
-            
+
+            {/* second */}
+            <div className='relative'>
+                <div className="
+                max-w-[380px] max-h-[190px] sm:max-w-6xl mx-auto rounded-[8px] text-white flex relative overflow-hidden
+                group transition-all duration-1000 ease-in-out hover:scale-102
+                bg-gradient-to-r from-[#1481A6] to-[#083240]
+                ">
+                {/* Solid color overlay (visible only on hover) */} 
+                <div
+                    className="
+                    absolute inset-0 bg-[#1481A6] opacity-0 
+                    group-hover:opacity-100 transition-opacity duration-700
+                    "
+                ></div>   
+
+                {/* Left Content */}  
+                <div className='p-4 hover:text-white'>
+                    <div className='flex items-center gap-2.5'>
+                        <Image
+                            src={"/upstart2.svg"}
+                            alt="logo"
+                            width={80}
+                            height={81}
+                            className="h-8 w-8 md:w-20 md:h-[71px] transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                        <h2 className='text-lg sm:text-3xl transition-transform duration-500 ease-in-out group-hover:scale-105 font-medium'>UpstartPrep</h2>
+                    </div>
+                    <div className='mt-[14px] space-y-3.5  text-white relative z-10 '>
+                        <p className='text-[13px] sm:text-base font-light w-[241px]'>Empowering students with personalized test prep and smart learning tools to achieve their academic goals.</p>
+                        <Link href={"/project/upstartprep"}>
+                        <button className='btn-shadow py-1.5 px-2.5 rounded-full text-[#1E1E1E] text-sm font-normal bg-[#FFFFFF] cursor-pointer'>
+                            Case Study
+                        </button>
+                        </Link>
+                    </div>
+                </div>     
+
+                {/* Right content */}
+                <div className='py-10 relative z-10 '>
+                        <Image
+                            src="/img1.png"
+                            alt="logo"
+                            width={140}
+                            height={80}
+                            className="h-auto max-w-[160px] left-5 relative transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                        <Image
+                            src="/img2.png"
+                            alt="logo"
+                            width={140}
+                            height={80}
+                            className="h-auto max-w-[160px] absolute bottom-10 left-10 transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                </div>
+
+                    {/* Logo now inside the group for hover effect */}
+                    <Image
+                        src="/up.svg"
+                        alt="logo"
+                        width={100}
+                        height={100}
+                        className='absolute bottom-0 left-0 z-0 transition-transform duration-500 ease-in-out group-hover:scale-105'
+                    />
+                </div>
+            </div>
+
+            {/* third  */}
+            <div className='relative'>
+                <div className="
+                max-w-[380px] max-h-[190px] sm:max-w-6xl mx-auto rounded-[8px] text-white flex relative overflow-hidden
+                group transition-all duration-1000 ease-in-out hover:scale-102
+                bg-[#0C9585] hover:bg-[#0A6558]
+                "> 
+                {/* Left Content */}  
+                <div className='p-4'>
+                    <div className='flex items-center gap-2.5'>
+                        <Image
+                        src={"/hamrologo.svg"}
+                        alt="logo"
+                        width={80}
+                        height={81}
+                        className="h-8 w-8 md:w-20 md:h-[71px] transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                        <h2 className='text-lg sm:text-3xl transition-transform duration-500 ease-in-out group-hover:scale-105 font-medium'>HamroCSIT</h2>
+                    </div>
+
+                    <div className='mt-[14px] space-y-3.5  text-white relative z-10'>
+                        <p className='text-[13px] sm:text-base font-light w-[241px]'>Comprehensive entrance prep with real tests, practice sets, and performance reports.</p>
+                        <Link href={"/project/upstartprep"}>
+                        <button className='btn-shadow py-1.5 px-2.5 rounded-full text-[#1E1E1E] text-sm font-normal bg-[#FFFFFF] cursor-pointer'>
+                            Case Study
+                        </button>
+                        </Link>
+                    </div>
+                </div>     
+
+                {/* Right content */}
+                <div className='relative z-10'>
+                        <Image
+                            src="/hamrocsit.png"
+                            alt="logo"
+                            width={266}
+                            height={134}
+                            className="h-auto max-w-[266px] -rotate-[18deg] -left-10 relative transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                        <Image
+                            src="/mobile_hamro.png"
+                            alt="logo"
+                            width={162}
+                            height={123}
+                            className=" max-w-[100px] h-auto absolute top-20 left-8 rotate-[14deg] transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                </div>
+
+                    {/* Logo now inside the group for hover effect */}
+                    <Image
+                        src="/hamrohalf.png"
+                        alt="logo"
+                        width={100}
+                        height={100}
+                        className='absolute top-0 right-0 z-0 transition-transform duration-500 ease-in-out group-hover:scale-105'
+                    />
+                </div>
+            </div>
+
+            {/* fourth  */}
+            <div className='relative'>
+                <div className="
+                max-w-[380px] max-h-[190px] sm:max-w-6xl mx-auto rounded-[8px] text-white flex relative overflow-hidden
+                group transition-all duration-1000 ease-in-out hover:scale-102
+                bg-[#1481A6] hover:bg-[#003764]
+                "> 
+                {/* Left Content */}  
+                <div className='p-4'>
+                    <div className='flex items-center gap-2.5'>
+                        <Image
+                        src={"/hamronotes.svg"}
+                        alt="logo"
+                        width={80}
+                        height={81}
+                        className="h-8 w-8 md:w-20 md:h-[71px] transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />
+                        <h2 className='text-lg sm:text-3xl transition-transform duration-500 ease-in-out group-hover:scale-105 font-medium'>HamroNotes</h2>
+                    </div>                    
+                    <div className='mt-[14px] space-y-3.5  text-white relative z-10'>
+                        <p className='text-[13px] sm:text-base font-light w-[241px]'>Comprehensive entrance prep with real tests, practice sets, and performance reports.</p>
+                        <Link href={"/project/upstartprep"}>
+                        <button className='btn-shadow py-1.5 px-2.5 rounded-full text-[#1E1E1E] text-sm font-normal bg-[#FFFFFF] cursor-pointer'>
+                            Case Study
+                        </button>
+                        </Link>
+                    </div>
+                </div>     
+
+                {/* Right content */}
+                <div className='relative z-10'>
+                        <Image
+                            src="/Hamronotes.png"
+                            alt="logo"
+                            width={266}
+                            height={134}
+                            className="h-auto max-w-[266px] rotate-[19deg] -left-10 relative transition-transform duration-500 ease-in-out group-hover:scale-105"
+                        />                        
+                </div>
+
+                    {/* Logo now inside the group for hover effect */}
+                    <Image
+                        src="/hamrohalf.png"
+                        alt="logo"
+                        width={100}
+                        height={100}
+                        className='absolute top-0 right-0 z-0 transition-transform duration-500 ease-in-out group-hover:scale-105'
+                    />
+                </div>
+            </div>
         </div>
     </MaxWidthWrapper>
   )

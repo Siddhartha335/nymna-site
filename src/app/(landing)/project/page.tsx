@@ -2,7 +2,7 @@ import Project from "@/components/Project/project"
 
 const page = () => {
   return (
-    <Project />
+    <Project status={true} />
   )
 }
 

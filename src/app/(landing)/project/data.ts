@@ -5,7 +5,7 @@ export const projects:Project[] = [
     project_id:"upstartprep",
     name: "UpstartPrep",
     logo: "/upstart.svg",
-    short_description: "AI-Powered Test Preparation Platform",
+    short_description: "Test Preparation Platform",
     medium_description:"Achieve your best scores with personalized learning, smart analytics, and guided tutoring — all in one place.",
     link: "https://upstartprep.com",
     long_description:"UpstartPrep transforms traditional test preparation through intelligent diagnostics and tailored learning experiences. The platform helps students identify strengths, focus on weaknesses, and track progress in real time for measurable improvement.",
@@ -29,7 +29,7 @@ export const projects:Project[] = [
     ],
     main_description: [
         {
-            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with AI-powered analytics, personalized study plans, and real-time progress tracking — all in one smart platform. </p><p> No more generic prep — learn smarter, faster, and confidently.</p>",
+            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with analytics, personalized study plans, and real-time progress tracking — all in one smart platform. </p><p> No more generic prep — learn smarter, faster, and confidently.</p>",
             imageUrl:"/upstartscreen.svg"
         },
         {
@@ -50,7 +50,7 @@ export const projects:Project[] = [
     project_id:"hamrocsit",
     name: "HamroCSIT",
     logo: "/hamrologo.svg",
-    short_description: "AI-Powered Test Preparation Platform",
+    short_description: "Test Preparation Platform",
     medium_description:"Achieve your best scores with personalized learning, smart analytics, and guided tutoring — all in one place.",
     link: "https://hamrocsit.com",
     long_description:"UpstartPrep transforms traditional test preparation through intelligent diagnostics and tailored learning experiences. The platform helps students identify strengths, focus on weaknesses, and track progress in real time for measurable improvement.",
@@ -74,7 +74,7 @@ export const projects:Project[] = [
     ],
     main_description: [
         {
-            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with AI-powered analytics, personalized study plans, and real-time progress tracking — all in one smart platform. <br /> No more generic prep — learn smarter, faster, and confidently.</p>",
+            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with analytics, personalized study plans, and real-time progress tracking — all in one smart platform. <br /> No more generic prep — learn smarter, faster, and confidently.</p>",
             imageUrl:"/upstartscreen.svg"
         },
         {
@@ -95,7 +95,7 @@ export const projects:Project[] = [
     project_id:"neb-summary",
     name: "NEB Summary",
     logo: "/neb.svg",
-    short_description: "AI-Powered Test Preparation Platform",
+    short_description: "Test Preparation Platform",
     medium_description:"Achieve your best scores with personalized learning, smart analytics, and guided tutoring — all in one place.",
     link: "https://http://neb-summary.hamronotes.com",
     long_description:"UpstartPrep transforms traditional test preparation through intelligent diagnostics and tailored learning experiences. The platform helps students identify strengths, focus on weaknesses, and track progress in real time for measurable improvement.",
@@ -119,7 +119,7 @@ export const projects:Project[] = [
     ],
     main_description: [
         {
-            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with AI-powered analytics, personalized study plans, and real-time progress tracking — all in one smart platform. <br /> No more generic prep — learn smarter, faster, and confidently.</p>",
+            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with analytics, personalized study plans, and real-time progress tracking — all in one smart platform. <br /> No more generic prep — learn smarter, faster, and confidently.</p>",
             imageUrl:"/upstartscreen.svg"
         },
         {
@@ -140,7 +140,7 @@ export const projects:Project[] = [
     project_id:"hamronotes",
     name: "HamroNotes",
     logo: "/hamronotes.svg",
-    short_description: "AI-Powered Test Preparation Platform",
+    short_description: "Test Preparation Platform",
     medium_description:"Achieve your best scores with personalized learning, smart analytics, and guided tutoring — all in one place.",
     link: "https://hamronotes.com",
     long_description:"UpstartPrep transforms traditional test preparation through intelligent diagnostics and tailored learning experiences. The platform helps students identify strengths, focus on weaknesses, and track progress in real time for measurable improvement.",
@@ -164,7 +164,7 @@ export const projects:Project[] = [
     ],
     main_description: [
         {
-            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with AI-powered analytics, personalized study plans, and real-time progress tracking — all in one smart platform. <br /> No more generic prep — learn smarter, faster, and confidently.</p>",
+            content:"<h2>One platform. Endless preparation.</h2> <p>Master your exams with analytics, personalized study plans, and real-time progress tracking — all in one smart platform. <br /> No more generic prep — learn smarter, faster, and confidently.</p>",
             imageUrl:"/upstartscreen.svg"
         },
         {

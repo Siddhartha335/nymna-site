@@ -37,8 +37,8 @@ const Footer = () => {
           <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 lg:gap-12 mb-12 sm:mb-16'>
             {/* Contact - Left */}
             <div className='text-center lg:text-left flex-1 order-2 lg:order-1'>
-              <h2 className='text-xs font-medium mb-4'>Contact</h2>
-              <p className='text-[15px] mb-2'>+977-9866115099</p>
+              <h2 className='text-base font-medium mb-4'>Contact</h2>
+              {/* <p className='text-[15px] mb-2'>+977-9866115099</p> */}
               <p className='text-[15px]'>info@nymna.com</p>
             </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
 
             {/* Location - Right */}
             <div className='text-center lg:text-right flex-1 order-3'>
-              <h2 className='text-xs font-medium mb-4'>Based in Nepal</h2>
+              <h2 className='text-base font-medium mb-4'>Location</h2>
               <p className='text-[15px]'>Bagdole, Lalitpur</p>
             </div>
           </div>
