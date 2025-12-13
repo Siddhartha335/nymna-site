@@ -21,7 +21,7 @@ const Navbar = () => {
     <MaxWidthWrapper>
     <div className="flex flex-row justify-between items-center pt-3 mb-10">
         <Link href="/" className="block md:hidden">
-          <Image src="/Logo.svg" alt="logo" width={80} height={40} className="cursor-pointer relative z-50" />
+          <Image src="/logo.svg" alt="logo" width={80} height={40} className="cursor-pointer relative z-50" />
         </Link>
         <Link href="/" className="hidden md:block">
           <Image src="/logo1.svg" alt="logo" width={114} height={93} className="cursor-pointer relative z-50" />
